@@ -1,22 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
-import Game from './components/Game'
+import menu from './assets/menu.png'
 
-class App extends Component {
-  render() {
+import BowlingGame from './components/Game';
+
+const App =  () => {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="Title">Blundell's Bowling</h1>
-        </header>
-        <p className="Intro">
-          Enter your score in after each bowl
-        </p>
-        <Game />
+        <div class="header" id="header">
+          <div class="header-content">
+                Ten Pin Bowling 
+          </div>
+          <div class="user"> 
+                  <span className='welcoome-user'>welcome User </span>
+                  <img className='img' src={menu} alt={"menu"}/> 
+          </div>
+        </div>
+        <BowlingGame />
       </div>
     );
-  }
 }
 
 export default App;

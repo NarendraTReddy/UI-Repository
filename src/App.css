@@ -1,23 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Bitter');
 
 .App {
   display: flex;
-  font-family: 'Bitter', cursive;
+  font-family: Arial, Helvetica, sans-serif;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
 }
 
-.Title {
-  font-family: 'Luckiest Guy', cursive;
+.header {
   text-align: center;
-  font-size: 60px;
-  color: red;
   margin: 20px;
-  margin-bottom: 0px;
+  background-color: mediumspringgreen;
+  color: white;
+  min-height: 50px;
+  min-width: 1365px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  display: flex;
 }
 
-.Intro {
-  text-align: center;
-  margin: 20px;
+.header-content {
+padding: 15px;
+flex-grow: 10;
 }
+
+.user { 
+  align-items: start;
+  justify-content: start;
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+  flex-grow: 2;
+}
+
+.img {
+height: 30px !important;
+}
+
+.welcoome-user{
+  margin-left: 15px;
+}
+
+
