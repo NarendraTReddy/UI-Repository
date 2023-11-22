@@ -5,46 +5,48 @@
 
 table.Scorecard {
   margin: 0 auto;
-  width:80%;
-  font-size:12px;
-  border:1px solid;
+  width: 80%;
+  font-size: 12px;
+  border: 1px solid;
   text-align: center;
   table-layout: fixed;
   margin-bottom: 40px;
 }
 
-table.Scorecard th, tr, td {
+table.Scorecard th,
+tr,
+td {
   padding: 0;
   vertical-align: middle;
   font-weight: bold;
 }
 
 table.Scorecard th {
-  border-bottom:1px solid;
-  background-color:#D3D3D3;
-  height:30px;
+  border-bottom: 1px solid;
+  background-color: #d3d3d3;
+  height: 30px;
 }
 
 table.Scorecard th:not(:last-child) {
-  border-right:1px solid;
+  border-right: 1px solid;
 }
 
 table.Scorecard td {
-  height:30px;
-  background: #F0F8FF;
-  border-bottom:1px solid;
+  height: 30px;
+  background: #f0f8ff;
+  border-bottom: 1px solid;
 }
 
 table.Scorecard tr td:not(:last-child) {
-  border-right:1px solid;
+  border-right: 1px solid;
 }
 
-table.Scorecard tr:nth-child(2){
-  border-bottom:1px solid;
+table.Scorecard tr:nth-child(2) {
+  border-bottom: 1px solid;
 }
 
 table.Scorecard tr:nth-child(2) td:last-child {
-  border-bottom:1px solid;
+  border-bottom: 1px solid;
 }
 
 table.Scorecard #r21 {
@@ -52,7 +54,7 @@ table.Scorecard #r21 {
 }
 
 table.Scorecard #total-score {
-  background-color: #E6E6FA;
+  background-color: #e6e6fa;
   border-bottom: none;
 }
 

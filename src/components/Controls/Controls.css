@@ -4,7 +4,7 @@
 }
 
 button {
-  font-family: 'Bitter', cursive;
+  font-family: "Bitter", cursive;
   width: 50px;
   height: 50px;
   margin: 10px;
@@ -17,11 +17,10 @@ button:hover {
 }
 
 button:disabled,
-button[disabled]{
+button[disabled] {
   background-color: #27b09e82;
   color: grey;
 }
-
 
 .btn {
   width: 100px;
@@ -30,10 +29,15 @@ button[disabled]{
   margin-top: 40px;
   margin-bottom: 20px;
   color: black;
+  display: inline;
 }
 
 .btn:hover {
   color: white;
   opacity: 0.9;
   color: black;
+}
+
+.error {
+  color: red;
 }

@@ -1,4 +1,3 @@
-const getFrameIndex = frames =>
-  frames.length - 1
+const getFrameIndex = (frames) => frames.length - 1;
 
-export default getFrameIndex
+export default getFrameIndex;

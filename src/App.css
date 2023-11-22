@@ -1,4 +1,3 @@
-
 .App {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
@@ -9,7 +8,7 @@
 .header {
   text-align: center;
   margin: 20px;
-  background-color: mediumspringgreen;
+  background-color: rgb(14, 156, 250);
   color: white;
   min-height: 50px;
   min-width: 1365px !important;
@@ -19,11 +18,13 @@
 }
 
 .header-content {
-padding: 15px;
-flex-grow: 10;
+  padding: 15px;
+  margin-left: 221px;
+  position: relative;
+  flex-grow: 10;
 }
 
-.user { 
+.user {
   align-items: start;
   justify-content: start;
   display: inline-block;
@@ -33,11 +34,18 @@ flex-grow: 10;
 }
 
 .img {
-height: 30px !important;
+  height: 30px !important;
+  position: relative;
+  margin-top: 10px;
 }
 
-.welcoome-user{
-  margin-left: 15px;
+.welcoome-user {
+  margin-right: 15px;
+  position: relative;
+  margin-top: -10px;
 }
 
-
+.menu {
+  position: relative;
+  margin-top: 10px;
+}
