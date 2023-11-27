@@ -1,6 +1,4 @@
-import React from "react";
 import isBonusRoll from "./isBonusRoll";
-import { shallow } from "enzyme";
 
 describe("isBonusRoll function", () => {
   it("should return true if bonus roll", () => {

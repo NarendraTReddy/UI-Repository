@@ -5,23 +5,29 @@ import updateCurrentRoll from "../../utilities/updateCurrentRoll";
 
 export const types = {
   enterScore: "Game/EnterScore",
-  reset: "Game/reset",
+  messageChanged: "Game/MessageChanged",
+  scoreChanged: "Game/ScoreChanged",
+  reset: "Game/Reset",
 };
 
 export const initialState = {
-  frames: [],
   cumulativeScores: [],
+  errorMessage: "",
+  frames: [],
   gameOver: false,
   pins: [],
   rolls: 0,
+  score: "",
 };
 
 const reducer = (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
     case types.enterScore:
+      return { ...state, score: action.payload };
+    case types.messageChanged:
+      return { ...state, errorMessage: action.payload };
+    case types.scoreChanged:
       const { frames, cumulativeScores, pins, rolls } = state;
-
       return {
         ...state,
         frames: updateFrames(rolls, action.payload, frames),

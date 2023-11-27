@@ -1,14 +1,12 @@
 import React from "react";
-import "./Scorecard.css";
+import "./scorecard.css";
 import { types } from "../Game/reducer";
 
 const Scorecard = ({ totalScore, state, dispatch }) => {
   const { cumulativeScores, frames, rolls } = state;
 
   const renderScores = (frame, roll) => {
-    let value = "";
     if (frames[frame]) {
-      console.log((roll === 1, frames[frame][roll - 1] + frames[frame][roll]));
       if (frames[frame][roll] === 0) return "-";
       else if (frames[frame][roll] === 10) return "X";
       else if (
@@ -18,12 +16,12 @@ const Scorecard = ({ totalScore, state, dispatch }) => {
         return "/";
       else return frames[frame][roll];
     }
-    return value;
+    return "";
   };
 
   return (
-    <div className="Container">
-      <table id="table" className="Scorecard" cellPadding="1" cellSpacing="0">
+    <div className="container">
+      <table id="table" className="scorecard" cellPadding="1" cellSpacing="0">
         <tbody>
           <tr>
             <th id="c1" colSpan="6">
@@ -166,7 +164,7 @@ const Scorecard = ({ totalScore, state, dispatch }) => {
 
       {rolls > 0 && (
         <button
-          className={"Reset"}
+          className="reset"
           onClick={() => dispatch({ type: types.reset })}
         >
           Reset

@@ -1,6 +1,4 @@
-import React from 'react'
 import isGameOver from './isGameOver'
-import {shallow} from 'enzyme'
 
 describe('isGameOver function', () => {
   it('should return false if rolls is less than 19', () => {

@@ -1,6 +1,4 @@
-import React from 'react'
 import strikeBonus from './strikeBonus'
-import {shallow} from 'enzyme'
 
 describe('strikeBonus function', () => {
   it('should return 10 plus the sum of the next two rolls', () => {

@@ -1,6 +1,4 @@
-import React from 'react'
 import isStrike from './isStrike'
-import {shallow} from 'enzyme'
 
 describe('isStrike function', () => {
   it('should return true if strike', () => {

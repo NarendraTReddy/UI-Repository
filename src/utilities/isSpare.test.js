@@ -1,6 +1,4 @@
-import React from 'react'
 import isSpare from './isSpare'
-import {shallow} from 'enzyme'
 
 describe('isSpare function', () => {
   it('should return true if spare', () => {
