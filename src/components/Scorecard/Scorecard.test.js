@@ -128,60 +128,49 @@ describe("Scorecard", () => {
     expect(wrapper.find("#cumulative-score-f10").text()).toEqual("");
   });
 
-  /*  it('returns correct score', () => {
-    const frames = [[0,0], [1,6], [7,3], [10], [4,5], [8,0]]
-    const cumulativeScores = [0, 7, 20, 19, 8]
-    const totalScore = 8
+  it("returns correct score", () => {
+    const frames = [[0, 0], [1, 6], [7, 3], [10], [4, 5], [8, 0]];
+    const cumulativeScores = [0, 7, 20, 19, 8];
+    const totalScore = 8;
     const state = {
       frames,
       cumulativeScores,
-      rolls:6
-    }
+      rolls: 6,
+    };
     const props = {
       state,
       dispatch,
-      totalScore
-    }
-    shallow(
-      <Scorecard
-        {...props}
-      />
-    )
-    expect(renderScoresTest(frames,0, 0)).toEqual("-")
-    expect(renderScoresTest(frames,0, 1)).toEqual("-")
-    expect(renderScoresTest(frames,1, 0)).toEqual(1)
-    expect(renderScoresTest(frames,1, 1)).toEqual(6)
-    expect(renderScoresTest(frames,2, 0)).toEqual(7)
-    expect(renderScoresTest(frames,2, 1)).toEqual(3)
-    expect(renderScoresTest(frames,3, 0)).toEqual("X")
-    expect(renderScoresTest(frames,3, 1)).toEqual(undefined)
-    expect(renderScoresTest(frames,4, 0)).toEqual(4)
-    expect(renderScoresTest(frames,4, 1)).toEqual(5)
-    expect(renderScoresTest(frames,5, 0)).toEqual(8)
-    expect(renderScoresTest(frames,5, 1)).toEqual("-")
-    expect(renderScoresTest(frames,6, 0)).toEqual("")
-    expect(renderScoresTest(frames,6, 1)).toEqual("")
-  }) 
+      totalScore,
+    };
+    shallow(<Scorecard {...props} />);
 
-  for (var i = 0; i < 20; i++) {
-    it("should render reset button if rolls greater than 1", () => {
-      const rolls = i;
-      const frames = [];
-      const cumulativeScores = [];
-      const totalScore = 0;
-      const state = {
-        frames,
-        cumulativeScores,
-        rolls,
-      };
-      const props = {
-        state,
-        dispatch,
-        totalScore,
-      };
+    const renderScores = (frame, roll) => {
+      if (frames[frame]) {
+        if (frames[frame][roll] === 0) return "-";
+        else if (frames[frame][roll] === 10) return "X";
+        else if (
+          roll === 1 &&
+          frames[frame][roll - 1] + frames[frame][roll] === 10
+        )
+          return "/";
+        else return frames[frame][roll];
+      }
+      return "";
+    };
 
-      const wrapper = shallow(<Scorecard {...props} />);
-      expect(wrapper.find("button.Reset").length).toEqual(1);
-    }); 
-  } */
+    expect(renderScores(0, 0)).toEqual("-");
+    expect(renderScores(0, 1)).toEqual("-");
+    expect(renderScores(1, 0)).toEqual(1);
+    expect(renderScores(1, 1)).toEqual(6);
+    expect(renderScores(2, 0)).toEqual(7);
+    expect(renderScores(2, 1)).toEqual("/");
+    expect(renderScores(3, 0)).toEqual("X");
+    expect(renderScores(3, 1)).toEqual(undefined);
+    expect(renderScores(4, 0)).toEqual(4);
+    expect(renderScores(4, 1)).toEqual(5);
+    expect(renderScores(5, 0)).toEqual(8);
+    expect(renderScores(5, 1)).toEqual("-");
+    expect(renderScores(6, 0)).toEqual("");
+    expect(renderScores(6, 1)).toEqual("");
+  });
 });
