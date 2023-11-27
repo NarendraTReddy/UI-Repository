@@ -1,6 +1,8 @@
+import React from "react";
 import "./header.css";
+import menu from "./../../assets/menu.png"
 
-export default Header = () => {
+const Header = () => {
   return (
     <div className="header" id="header">
       <div className="header-content">Ten Pin Bowling</div>
@@ -11,3 +13,5 @@ export default Header = () => {
     </div>
   );
 };
+
+export default Header;
