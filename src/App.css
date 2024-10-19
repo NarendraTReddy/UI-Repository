@@ -1,0 +1,51 @@
+.app {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin: 20px;
+  background-color: rgb(14, 156, 250);
+  color: white;
+  min-height: 50px;
+  min-width: 1365px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  display: flex;
+}
+
+.header-content {
+  padding: 15px;
+  margin-left: 221px;
+  position: relative;
+  flex-grow: 10;
+}
+
+.user {
+  align-items: start;
+  justify-content: start;
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+  flex-grow: 2;
+}
+
+.img {
+  height: 30px !important;
+  position: relative;
+  margin-top: 10px;
+}
+
+.welcoome-user {
+  margin-right: 15px;
+  position: relative;
+  margin-top: -10px;
+}
+
+.menu {
+  position: relative;
+  margin-top: 10px;
+}
