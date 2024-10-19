@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import menu from "./../../assets/menu.png"
+//import menu from "../../../public/assets/menu.png";
 
 const Header = () => {
   return (
@@ -8,7 +8,7 @@ const Header = () => {
       <div className="header-content">Ten Pin Bowling</div>
       <div className="user">
         <span className="welcoome-user">welcome User </span>
-        <img className="img" src={menu} alt={"menu"} />
+        {/* <img className="img" src={menu} alt={"menu"} /> */}
       </div>
     </div>
   );
