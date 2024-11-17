@@ -12,7 +12,7 @@ const Layout = () => {
           <Link to="/user">User App</Link>
         </li>
         <li>
-          <Link to="/tictactoe">Tic Tac Toe App</Link>
+          <Link to="/newApp">New App</Link>
         </li>
       </ul>
       <Outlet />
