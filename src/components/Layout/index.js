@@ -11,6 +11,9 @@ const Layout = () => {
         <li>
           <Link to="/user">User App</Link>
         </li>
+        <li>
+          <Link to="/newApp">New App</Link>
+        </li>
       </ul>
       <Outlet />
     </div>
